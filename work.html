@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Triangle {
+            constructor(baseLength, triangleHeight, sideA, sideB, sideC) {
+                this.baseLength = baseLength;    
+                this.triangleHeight = triangleHeight;
+                this.sideA = sideA;
+                this.sideB = sideB;
+                this.sideC = sideC;
+            }
+
+            Input() {
+                this.triangleHeight = parseInt(prompt("Введите высоту: "));
+                this.baseLength = parseInt(prompt("Введите основание: "));
+                this.sideA = parseInt(prompt("Введите сторону 1: "));
+                this.sideB = parseInt(prompt("Введите сторону 2: "));
+                this.sideC = parseInt(prompt("Введите сторону 3: "));
+            }
+
+            getArea() {
+                return (this.baseLength * this.triangleHeight) / 2;
+            }
+
+            getPerimeter() {
+                return this.sideA + this.sideB + this.sideC;
+            }
+        }
+
+        let triangleObj = new Triangle(10, 20, 30, 40, 50);
+        triangleObj.Input();
+        let area = triangleObj.getArea();
+        let perimeter = triangleObj.getPerimeter();
+        console.log(area);
+        console.log(perimeter);
+
+    </script>
+</body>
+</html>
